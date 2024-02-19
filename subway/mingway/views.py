@@ -81,7 +81,7 @@ class MingSubwayToWork(APIView):
                                 'arvlMsg3' : info['arvlMsg3'],
                             })
                 subway_infomation.append({'Sadang Station' : infomation})
-
+        print()
         return Response(subway_infomation, status=status.HTTP_200_OK)
     
 

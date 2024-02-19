@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'mingway',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -62,9 +63,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'subway.urls'
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',  # React 애플리케이션의 주소에 맞게 변경
+]
 
 TEMPLATES = [
     {
